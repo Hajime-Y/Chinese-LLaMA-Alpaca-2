@@ -52,4 +52,5 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_pt_with_peft.py \
     --lora_dropout ${lora_dropout} \
     --torch_dtype float16 \
     --gradient_checkpointing \
-    --ddp_find_unused_parameters False
+    --ddp_find_unused_parameters False \
+    --flash_attn True

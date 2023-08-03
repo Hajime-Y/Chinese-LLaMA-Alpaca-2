@@ -5,7 +5,7 @@ lora_trainable="q_proj,v_proj,k_proj,o_proj,gate_proj,down_proj,up_proj"
 modules_to_save="embed_tokens,lm_head"
 lora_dropout=0.05
 
-pretrained_model=../../../pt_model
+pretrained_model="meta-llama/Llama-2-7b-hf"
 chinese_tokenizer_path=../../../pt_tokenizer
 dataset_dir=../../../pt_data
 data_cache=../../../pt_data_cache

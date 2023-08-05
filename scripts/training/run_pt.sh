@@ -9,8 +9,8 @@ pretrained_model="meta-llama/Llama-2-7b-hf"
 chinese_tokenizer_path=../../../pt_tokenizer
 dataset_dir=../../../pt_data
 data_cache=../../../pt_data_cache
-per_device_train_batch_size=8
-per_device_eval_batch_size=8
+per_device_train_batch_size=16
+per_device_eval_batch_size=16
 gradient_accumulation_steps=1
 output_dir=../../../pt_output
 

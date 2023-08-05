@@ -9,9 +9,9 @@ pretrained_model="meta-llama/Llama-2-7b-hf"
 chinese_tokenizer_path=../../../pt_tokenizer
 dataset_dir=../../../pt_data
 data_cache=/content/pt_data_cache
-per_device_train_batch_size=1
+per_device_train_batch_size=4
 per_device_eval_batch_size=1
-gradient_accumulation_steps=8
+gradient_accumulation_steps=2
 output_dir=../../../pt_output
 
 deepspeed_config_file=ds_zero2_no_offload.json
@@ -37,7 +37,7 @@ torchrun --nnodes 1 --nproc_per_node 1 run_clm_pt_with_peft.py \
     --logging_steps 10 \
     --save_strategy steps \
     --save_total_limit 3 \
-    --save_steps 200 \
+    --save_steps 400 \
     --gradient_accumulation_steps ${gradient_accumulation_steps} \
     --preprocessing_num_workers 8 \
     --block_size 1024 \

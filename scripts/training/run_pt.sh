@@ -6,13 +6,13 @@ modules_to_save="embed_tokens,lm_head"
 lora_dropout=0.05
 
 pretrained_model="meta-llama/Llama-2-7b-hf"
-chinese_tokenizer_path=../../../pt_tokenizer
-dataset_dir=../../../pt_data
+chinese_tokenizer_path=/content/pt_tokenizer
+dataset_dir=/content/pt_data
 data_cache=/content/pt_data_cache
 per_device_train_batch_size=4
 per_device_eval_batch_size=1
 gradient_accumulation_steps=2
-output_dir=../../../pt_output
+output_dir=/content/pt_output
 
 deepspeed_config_file=ds_zero2_no_offload.json
 
